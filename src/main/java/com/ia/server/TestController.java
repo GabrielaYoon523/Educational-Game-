@@ -6,10 +6,32 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class TestController {
-    @GetMapping("/test")
-    @ResponseBody
-    public String test1() {
-        return "Hello world";
+    @GetMapping("/main")
+    public String mainPage() {
+        return "main";
     }
+
+    @GetMapping("/signup")
+    public String signupPage() {
+        return "signup";
+    }
+
+    @GetMapping("/signin")
+    public String signinPage() {
+        return "signin";
+    }
+
+    @GetMapping("/store")
+    public String storePage() {
+        return "store";
+    }
+
+
+    @GetMapping("/forgot-password")
+    public String forgotpasswordPage() {
+        return "forgotpassword";
+    }
+
+
 
 }
