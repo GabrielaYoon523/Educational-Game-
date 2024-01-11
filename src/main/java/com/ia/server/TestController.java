@@ -28,7 +28,7 @@ public class TestController {
 
 
     @GetMapping("/forgot-password")
-    public String forgotpasswordPage() {
+    public String forgotPasswordPage() {
         return "forgotpassword";
     }
 
