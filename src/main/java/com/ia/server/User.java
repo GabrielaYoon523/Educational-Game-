@@ -1,11 +1,13 @@
 package com.ia.server;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+@Getter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +20,8 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @Column
+    @Column(name = "password")
     private String password;
+
 
 }
